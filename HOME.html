@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IEEE SB Home</title>
+  <link rel="stylesheet" href="homecss.css">
+</head>
+<body>
+
+  <!-- Fixed Navbar -->
+  <header class="top">
+    <div class="logo">
+      <img src="IEEE_blue.png" height="40" width="60" alt="IEEE Logo">
+      <h2>IEEE SB</h2>
+    </div>
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ieeeabout.html">About IEEE</a></li>
+        <li><a href="student.html">About SB</a></li>
+        <li><a href="society.html">Societies</a></li>
+        <li><a href="team.html">Executive Committee</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="membership.html">Membership</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="banner">
+    <h1>Welcome to IEEE Student Branch STM</h1>
+    <p>Empowering Students with Technology, Innovation, and Leadership</p>
+    <a href="membership.html"><button>Join IEEE SB</button></a>
+  </section>
+
+  <!-- Highlights -->
+  <section class="highlights">
+    <h2>Our Highlights</h2>
+    <div class="highlight-cards">
+      <div class="card">
+        <h3>Events</h3>
+        <p>17+ workshops, tech talks, and hackathons organized by students.</p>
+      </div>
+      <div class="card">
+        <h3>Societies</h3>
+        <p>CS, WIE, PES, Robotics & Automation Society – specialized focus areas.</p>
+      </div>
+      <div class="card">
+        <h3>Achievements</h3>
+        <p>Awards, recognitions, and milestones achieved by our student branch.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 IEEE Student Branch STM. All rights reserved.</p>
+  </footer>
+
+  <!-- JS for active menu highlighting -->
+  <script>
+    const links = document.querySelectorAll('.menu ul li a');
+    let current = window.location.pathname.split("/").pop();
+    if (current === "" || current === "index.html") current = "index.html";
+    links.forEach(link => {
+      if(link.getAttribute('href') === current){
+        link.classList.add('active');
+      }
+    });
+  </script>
+
+</body>
+</html>
